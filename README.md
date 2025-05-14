@@ -14,26 +14,7 @@ _Figure 2. Discriminator. The discriminator guides the generator to generate mor
 
 ## Project Structure
 
-pytorch-image-dehazing/
-│
-├── compare_images.py     # Script to visualize and compare hazy, dehazed, and ground truth images
-├── data.py               # Dataset loading and preprocessing logic
-├── demo.py               # Run the model on single image(s) for quick testing
-├── figs/                 # Project architecture images in GAN
-│   ├── discriminator.png
-│   ├── generator.png
-|   ├── flowdiagram.png
-│   ├── psnr_distribution.jpg
-│   └── ssim_distribution.jpg
-├── main.py               # Main script for training the model with wandb
-├── metrics.py            # Image quality metrics like PSNR, SSIM and Entropy
-├── model.py              # Generator model definition
-├── preprocessing.py      # Preprocess the dataset like equal pairs
-├── requirements.txt      # Python dependencies
-├── test.py               # Script for evaluating model performance on test datasets
-├── utils.py              # Utility functions (image transformations, tensor conversion, etc.)
-├── vgg16.py              # VGG-16 model for perceptual loss (if used)
-└── README.md             # Project documentation (this file)
+<pre> ```text pytorch-image-dehazing/ │ ├── compare_images.py # Script to visualize and compare hazy, dehazed, and ground truth images ├── data.py # Dataset loading and preprocessing logic ├── demo.py # Run the model on single image(s) for quick testing ├── figs/ # Project architecture images in GAN │ ├── discriminator.png │ ├── generator.png │ ├── flowdiagram.png │ ├── psnr_distribution.jpg │ └── ssim_distribution.jpg ├── main.py # Main script for training the model with wandb ├── metrics.py # Image quality metrics like PSNR, SSIM and Entropy ├── model.py # Generator model definition ├── preprocessing.py # Preprocess the dataset like equal pairs ├── requirements.txt # Python dependencies ├── test.py # Script for evaluating model performance on test datasets ├── utils.py # Utility functions (image transformations, tensor conversion, etc.) ├── vgg16.py # VGG-16 model for perceptual loss (if used) └── README.md # Project documentation (this file) ``` </pre>
 
 ## Table of Contents
 
