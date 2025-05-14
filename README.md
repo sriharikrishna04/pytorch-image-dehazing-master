@@ -22,8 +22,8 @@ pytorch-image-dehazing/
 ├── demo.py               # Run the model on single image(s) for quick testing
 ├── figs/                 # Project architecture images in GAN
 │   ├── discriminator.png
+|   ├── flowdiagram.png
 │   ├── generator.png
-│   ├── flowdiagram.png
 │   ├── psnr_distribution.jpg
 │   └── ssim_distribution.jpg
 ├── main.py               # Main script for training the model with wandb
@@ -77,8 +77,8 @@ This project is designed to run on Kaggle, which provides free GPU acceleration 
 
 3. **Import the repository**:
    ```python
-   !git clone https://github.com/your-username/pytorch-image-dehazing.git
-   %cd pytorch-image-dehazing
+   !git clone https://github.com/sriharikrishna04/pytorch-image-dehazing-master
+   %cd pytorch-image-dehazing-master
    ```
 
 4. **Dependencies**:
