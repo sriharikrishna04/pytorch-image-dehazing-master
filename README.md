@@ -21,6 +21,7 @@ pytorch-image-dehazing/
 ├── data.py               # Dataset loading and preprocessing logic
 ├── demo.py               # Run the model on single image(s) for quick testing
 ├── figs/                 # Project architecture images in GAN
+│   ├── dehazed_outputs.png
 │   ├── discriminator.png
 |   ├── flowdiagram.png
 │   ├── generator.png
@@ -288,7 +289,7 @@ Example:
                       --save_dir /kaggle/working/comparisons
 ```
 
-## Image Metrics - PSNR, SSIM, ENTROPY:
+## Image Metrics - PSNR, SSIM, ENTROPY
 
 To measure the reality among hazy, dehazed, and ground truth images:
 
@@ -331,6 +332,7 @@ The models are evaluated using the following metrics:
 After evaluating the model on the O-HAZE Combined dataset, we achieved the following results:
 ![PSNR_DISTRIBUTION](figs/psnr_distribution.jpg)
 ![SSIM_DISTRIBUTION](figs/ssim_distribution.jpg)
+![DEHAZED_OUTPUTS](figs/dehazed_outputs.png).
 
 ```
 Average Metrics on dehazed images:
