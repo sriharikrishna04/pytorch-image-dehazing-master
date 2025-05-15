@@ -93,6 +93,59 @@ This project is designed to run on Kaggle, which provides free GPU acceleration 
    import wandb
    wandb.login(key="enter the key from the project created in wandb website")
    ```
+## Weights & Biases (wandb) Integration
+
+### Setting up wandb
+
+1. **Create a wandb account**:
+   - Go to [wandb.ai](https://wandb.ai) and sign up for a free account
+   - After signing up, you'll be able to create projects and get your API key
+
+2. **Create a new project**:
+   - Click on "New Project" in your wandb dashboard
+   - Give your project a name (e.g., "image-dehazing")
+   - Select your workspace/entity name
+   - Click "Create Project"
+
+3. **Get your API key**:
+   - Go to your wandb profile settings
+   - Find your API key in the "API Keys" section
+   - Copy the key for use in your training script
+
+### Monitoring Training Progress
+
+After starting training, wandb provides real-time monitoring of:
+
+1. **Training Metrics**:
+   - Generator and Discriminator losses
+   - PSNR and SSIM metrics
+   - Learning rates
+   - Training time
+
+2. **Visualizations**:
+   - Loss curves
+   - Metric trends
+   - Sample image outputs
+   - Model architecture graphs
+
+3. **Experiment Tracking**:
+   - All hyperparameters are automatically logged
+   - Compare different training runs
+   - Track model performance across epochs
+
+To view your training progress:
+1. Log in to [wandb.ai](https://wandb.ai)
+2. Navigate to your project
+3. Click on the active run to see detailed metrics and visualizations
+4. Use the dashboard to compare different runs and analyze results
+
+### Example wandb Dashboard Sections:
+
+- Overview: General training progress and metrics
+- System: GPU/CPU utilization and memory usage
+- Media: Generated images and comparisons
+- Charts: Custom metric plots and loss curves
+- Logs: Detailed training logs and events
 
 ## Dataset
 
@@ -235,7 +288,7 @@ To evaluate the model on 50 random test images and calculate metrics:
 
 Example:
 ```python
-!python /kaggle/working/pytorch-image-dehazing/test.py \
+!python /kaggle/working/pytorch-image-dehazing-master/test_model.py \
          --model /kaggle/input/checkpoint-1260/checkpoint_epoch_1260.pth \
          --hazy_dir /kaggle/input/o-haze-combined/o_haze/o_haze/O-HAZY/hazy \
          --gt_dir /kaggle/input/o-haze-combined/o_haze/o_haze/O-HAZY/GT \
@@ -264,7 +317,7 @@ To visually compare hazy, dehazed, and ground truth images:
 Example:
 ```python
 %run compare_images.py --hazy /kaggle/input/o-haze-combined/o_haze/o_haze/O-HAZY/hazy/0001_0.8_0.2.jpg \
-       --dehazed /kaggle/working/pytorch-image-dehazing/outputs/0001_0.8_0.2.jpg \
+       --dehazed /kaggle/working/pytorch-image-dehazing-master/outputs/0001_0.8_0.2.jpg \
        --gt /kaggle/input/o-haze-combined/o_haze/o_haze/O-HAZY/GT/0001.png
 ```
 
@@ -304,7 +357,7 @@ Example:
 ```python
 !python metrics.py --hazy /kaggle/input/o-haze-combined/o_haze/o_haze/O-HAZY/hazy/0001_0.8_0.2.jpg \
                    --gt /kaggle/input/o-haze-combined/o_haze/o_haze/O-HAZY/GT/0001.png \
-                   --dehazed /kaggle/working/pytorch-image-dehazing/outputs/0001_0.8_0.2.jpg
+                   --dehazed /kaggle/working/pytorch-image-dehazing-master/outputs/0001_0.8_0.2.jpg
 ```
 
 ## Pre-trained Models
